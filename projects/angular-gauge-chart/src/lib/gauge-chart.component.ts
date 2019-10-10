@@ -31,6 +31,7 @@ export class GaugeChartComponent implements OnInit, OnChanges, DoCheck {
   @Input() nameFont?: string
   @Input() bottomLabel?: string
   @Input() bottomLabelFont?: string
+  @Input() bottomLabelColor?: string
 
   public nameMargin: string
   public bottomLabelMargin: string
@@ -53,6 +54,9 @@ export class GaugeChartComponent implements OnInit, OnChanges, DoCheck {
         this.bottomLabelFont = '' + Math.round(this.canvasWidth / 10)
       }
       this.bottomLabelMargin = '-' + this.bottomLabelFont
+      if (!this.bottomLabelColor) {
+        this.bottomLabelColor = 'black'
+      }
     }
 
     if (this.optionsCheck()) {

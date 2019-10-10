@@ -14,6 +14,7 @@ import { Component, OnInit } from '@angular/core'
       [options]="options"
       [name]="name"
       [bottomLabel]="bottomLabel"
+      [bottomLabelColor]="bottomLabelColor"
     ></rg-gauge-chart>
   `,
 })
@@ -26,6 +27,7 @@ export class AppComponent implements OnInit {
   // public nameFont = 30
   public bottomLabel = '65'
   // public bottomLabelFont = 28
+  public bottomLabelColor = 'black'
   ngOnInit() {
     this.canvasWidth = 300
     this.needleValue = 65

@@ -58,7 +58,7 @@ module.exports = function() {
     },
     externals: {
       '@angular/core': '@angular/core',
-      'gauge-chart': 'gauge-chart',
+      'gauge-chart-oxygenai': 'gauge-chart-oxygenai',
       tslib: 'tslib',
     },
     resolve: {

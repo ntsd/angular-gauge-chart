@@ -105,7 +105,7 @@
         }
       }
     },
-    "angular-gauge-chart": {
+    "angular-gauge-chart-oxygenai": {
       "root": "projects/angular-gauge-chart",
       "sourceRoot": "projects/angular-gauge-chart/src",
       "projectType": "library",

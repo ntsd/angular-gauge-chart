@@ -1,12 +1,12 @@
 {
-  "name": "angular-gauge-chart",
-  "version": "0.7.2",
+  "name": "angular-gauge-chart-oxygenai",
+  "version": "0.7.4",
   "peerDependencies": {
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0"
   },
   "dependencies": {
-    "gauge-chart": "^0.5.1"
+    "gauge-chart-oxygenai": "^0.5.5"
   },
   "scripts": {
     "precommit": "lint-staged"

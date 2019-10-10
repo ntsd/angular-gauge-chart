@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "precommit": "lint-staged",
-    "public-publish": "ng build angular-gauge-chart && cd dist/angular-gauge-chart && npm publish"
+    "public-publish": "ng build angular-gauge-chart-oxygenai && cd dist/angular-gauge-chart-oxygenai && npm publish"
   },
   "dependencies": {
     "@angular/animations": "^8.2.7",
@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^8.2.7",
     "@angular/router": "^8.2.7",
     "core-js": "^2.6.9",
-    "gauge-chart": "^0.5.3",
+    "gauge-chart-oxygenai": "^0.5.5",
     "rxjs": "^6.5.3",
     "zone.js": "~0.9.1"
   },

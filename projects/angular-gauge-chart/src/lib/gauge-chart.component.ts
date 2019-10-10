@@ -9,7 +9,7 @@ import {
   ViewChild,
   DoCheck,
 } from '@angular/core'
-import * as GaugeChart from 'gauge-chart'
+import * as GaugeChart from 'gauge-chart-oxygenai'
 
 /**
  * GaugeChart Component

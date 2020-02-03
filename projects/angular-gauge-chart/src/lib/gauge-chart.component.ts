@@ -41,6 +41,16 @@ export class GaugeChartComponent implements OnInit, OnChanges, DoCheck {
   private oldOptions
 
   ngOnInit() {
+    this.calculateStyles()
+
+    if (this.optionsCheck()) {
+      this.element = this.gaugeArea.nativeElement
+      this.drawChart()
+    }
+    this.oldOptions = JSON.parse(JSON.stringify(this.options))
+  }
+
+  calculateStyles() {
     // calculate styles for name and bottomLabel
     if (this.name) {
       if (!this.nameFont) {
@@ -58,12 +68,6 @@ export class GaugeChartComponent implements OnInit, OnChanges, DoCheck {
         this.bottomLabelColor = 'black'
       }
     }
-
-    if (this.optionsCheck()) {
-      this.element = this.gaugeArea.nativeElement
-      this.drawChart()
-    }
-    this.oldOptions = JSON.parse(JSON.stringify(this.options))
   }
 
   optionsCheck() {
@@ -92,7 +96,7 @@ export class GaugeChartComponent implements OnInit, OnChanges, DoCheck {
   }
 
   drawChart(redraw = false) {
-    if (redraw) {
+    if (redraw && this.gaugeChart) {
       this.gaugeChart.removeGauge()
     }
     this.options.centralLabel = this.centralLabel
@@ -111,6 +115,11 @@ export class GaugeChartComponent implements OnInit, OnChanges, DoCheck {
     }
     if (changes.centralLabel && !changes.centralLabel.firstChange) {
       this.centralLabel = changes.centralLabel.currentValue
+      this.drawChart(true)
+    }
+    if (changes.canvasWidth && !changes.canvasWidth.firstChange) {
+      this.canvasWidth = changes.canvasWidth.currentValue
+      this.calculateStyles()
       this.drawChart(true)
     }
   }
